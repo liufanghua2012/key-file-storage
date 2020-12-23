@@ -1,4 +1,4 @@
-# key-file-storage
+# key-file-storage (add clearCacheSync for my own needs)
 
 #### Simple key-value storage (a persistent data structure) directly on file system, maps each key to a separate file.
 

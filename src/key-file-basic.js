@@ -21,6 +21,7 @@ function keyFileBasic(kfsPath, cache) {
         deleteSync,
         clearSync,
         hasSync,
+        clearCacheSync, //liufh
 
         // Asynchronous
         setAsync,
@@ -28,6 +29,7 @@ function keyFileBasic(kfsPath, cache) {
         deleteAsync,
         clearAsync,
         hasAsync,
+        //clearCacheAsync, //liufh
 
         // Iterate
         querySync,
@@ -72,6 +74,15 @@ function keyFileBasic(kfsPath, cache) {
         fs.removeSync(file);
         return delete cache[key];
     }
+
+    function clearCacheSync(key) {
+        key = validizeKey(key);
+        //if (key === '*') {
+        //    return clearSync();
+        //}
+        return delete cache[key];
+    }
+    
 
     function clearSync() {
         fs.removeSync(kfsPath);
